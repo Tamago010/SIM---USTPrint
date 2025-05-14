@@ -1,0 +1,40 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# Backend
+backend/uploads/
+backend/.DS_Store
+
+# Frontend
+frontend/build/
+frontend/.DS_Store
+frontend/coverage/
+# Remove if not used: frontend/.cache/ frontend/dist/
+
+# Editor and OS files
+*.swp
+*.swo
+.vscode/
+.idea/
+.settings/
+.project
+
+# Logs
+*.log
+
+# Optional: Add if applicable
+# *.db  # For local database files
+# backend/node_modules/  # Explicitly exclude backend node_modules if needed
+# frontend/node_modules/  # Explicitly exclude frontend node_modules if needed
