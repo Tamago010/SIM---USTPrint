@@ -73,5 +73,16 @@ app.use('/api/messages', messageRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/admin', adminRoutes);
 
+const path = require('path');
+
+// Serve static files from the React frontend
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// For any routes not handled by your API, send back React's index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
+
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
